@@ -100,6 +100,29 @@ ok:true,
 msg:"Entry Deleted"
 });
 });
+app.put("/diary/:id",(req,res)=>{
+
+let id=req.params.id;
+let t=req.body.title;
+let c=req.body.content;
+let a=JSON.parse(fs.readFileSync("./diary.json"));
+let i=a.findIndex(x=>x.id==id);
+
+if(i==-1){
+return res.json({
+ok:false,
+msg:"Entry not found"
+});
+}
+a[i].title=t;
+a[i].content=c;
+fs.writeFileSync("./diary.json",JSON.stringify(a,null,2));
+
+res.json({
+ok:true,
+msg:"Entry Updated"
+});
+});
 app.listen(5000,()=>{
     console.log("Server Started");
 });

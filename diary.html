@@ -3,36 +3,39 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Diary</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Personal Diary</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="diary.css">
 
-<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
 <div class="main">
-<div class="top">
+<div class="nav">
+<div>
+<h1>📖 Personal Diary</h1>
 
-<h2>Personal Diary</h2>
-<button class="out" onclick="logout()">Logout</button>
-
+<p id="wel"></p>
 </div>
+<button class="logout" onclick="logout()">
+Logout
+</button>
+</div>
+<div class="write">
+<h2>Write something beautiful Today ✨</h2>
 
-<h3 id="wel"></h3>
 <input type="text" id="t" placeholder="Title">
 <textarea id="c" placeholder="Write your thoughts..."></textarea>
-<button class="save" onclick="add()">Save Entry</button>
-<h2 class="head">My Entries</h2>
 
+<button class="save" onclick="add()">
+Save Entry
+</button>
+</div>
+<h2 class="mem">Your memories</h2>
 <div id="show"></div>
 </div>
-
 <script src="config.js"></script>
 <script src="diary.js"></script>
 

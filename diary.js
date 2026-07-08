@@ -1,8 +1,9 @@
 let id=localStorage.getItem("id");
 
 let u=localStorage.getItem("username");
-document.getElementById("wel").innerHTML="Welcome";
-
+document.getElementById("wel").innerHTML="Welcome,"+u+" 👋<br>Every memory deserves a place";
+let e=0;
+show();
 function logout(){
 localStorage.clear();
 window.location="index.html";
@@ -52,8 +53,14 @@ s+=`
 <small>${a[i].date}</small>
 
 <p>${a[i].content}</p>
-<button onclick="edit(${a[i].id})">Edit</button>
-<button onclick="del(${a[i].id})">Delete</button>
+<div class="btns">
+<button class="edit" onclick="edit(${a[i].id})">
+✏ Edit
+</button>
+<button class="del" onclick="del(${a[i].id})">
+🗑 Delete
+</button>
+</div>
 </div>
 `;
 
@@ -72,6 +79,48 @@ method:"DELETE"
 });
 let d=await r.json();
 alert(d.msg);
+show();
+}
+function edit(id){
+e=id;
+
+let c=document.getElementsByClassName("card");
+for(let i=0;i<c.length;i++){
+
+if(c[i].querySelector("button").getAttribute("onclick")==`edit(${id})`){
+
+document.getElementById("t").value=c[i].querySelector("h3").innerHTML;
+document.getElementById("c").value=c[i].querySelector("p").innerHTML;
+
+break;
+}
+}
+document.querySelector(".save").innerHTML="Update Entry";
+document.querySelector(".save").setAttribute("onclick","update()");
+}
+async function update(){
+let t=document.getElementById("t").value;
+let c=document.getElementById("c").value;
+let r=await fetch(API+"/diary/"+e,{
+method:"PUT",
+
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify({
+title:t,
+content:c
+
+})
+});
+
+let d=await r.json();
+alert(d.msg);
+document.getElementById("t").value="";
+document.getElementById("c").value="";
+document.querySelector(".save").innerHTML="Save Entry";
+document.querySelector(".save").setAttribute("onclick","add()");
+
 show();
 
 }
