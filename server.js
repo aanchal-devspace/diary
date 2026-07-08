@@ -5,10 +5,7 @@ const fs=require("fs");
 const app=express();
 app.use(cors());
 app.use(express.json());
-
-app.get("/",(req,res)=>{
-    res.send("Server Running");
-});
+app.use(express.static("public"));
 
 app.post("/register",(req,res)=>{
 
