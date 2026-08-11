@@ -2,13 +2,13 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 body{
 min-height:100vh;
 padding:40px;
-background:linear-gradient(135deg,#0f172a,#312e81,#7c3aed);
+background-image: url('https://i.pinimg.com/736x/6a/8b/74/6a8b7489aff33a3d6c3cdfc4a4682745.jpg');
 background-attachment:fixed;
 }
 
@@ -31,13 +31,14 @@ margin-bottom:35px;
 }
 
 .nav h1{
-color:white;
+color:rgb(123, 6, 6);
+font-family:"Dancing Script",cursive;
 font-size:34px;
 }
 
 #wel{
 margin-top:8px;
-color:#d8d8d8;
+color:#141313;
 font-size:15px;
 }
 
@@ -46,7 +47,7 @@ width:130px;
 padding:12px;
 border:none;
 border-radius:12px;
-background:#ff4b5c;
+background:#177cef;
 color:white;
 font-size:15px;
 cursor:pointer;
@@ -65,7 +66,7 @@ margin-bottom:40px;
 }
 
 .write h2{
-color:white;
+color:rgb(123, 16, 16);
 margin-bottom:20px;
 font-size:28px;
 }
@@ -76,14 +77,14 @@ padding:16px;
 border:none;
 border-radius:12px;
 outline:none;
-background:rgba(255,255,255,.15);
-color:white;
+background:rgba(143, 33, 33, 0.15);
+color:rgb(60, 13, 13);
 font-size:16px;
 margin-bottom:20px;
 }
 
 #t::placeholder{
-color:#ddd;
+color:#181616;
 }
 
 textarea{
@@ -95,13 +96,13 @@ border-radius:15px;
 outline:none;
 resize:none;
 background:rgba(255,255,255,.15);
-color:white;
+color:rgb(63, 6, 6);
 font-size:16px;
 margin-bottom:25px;
 }
 
 textarea::placeholder{
-color:#ddd;
+color:#121212;
 }
 .save{
 width:220px;
@@ -113,18 +114,14 @@ border-radius:15px;
 font-size:17px;
 font-weight:600;
 cursor:pointer;
-background:linear-gradient(45deg,#7c3aed,#ec4899);
+background:rgb(126, 31, 31);
 color:white;
 transition:.3s;
 }
 
-.save:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 25px rgba(124,58,237,.5);
-}
 
 .mem{
-color:white;
+color:rgb(42, 40, 40);
 font-size:28px;
 margin-bottom:25px;
 }
@@ -136,7 +133,7 @@ gap:25px;
 }
 
 .card{
-background:white;
+background:rgb(212, 208, 208);
 border-radius:18px;
 padding:22px;
 box-shadow:0 12px 25px rgba(0,0,0,.15);
@@ -148,21 +145,21 @@ transform:translateY(-8px);
 }
 
 .card h3{
-font-size:23px;
-color:#312e81;
+font-size:30px;
+color:#1d198f;
 margin-bottom:8px;
 }
 
 .card small{
 display:block;
 margin-bottom:18px;
-color:gray;
+color:rgb(80, 79, 79);
 }
 
 .card p{
-font-size:15px;
+font-size:20px;
 line-height:25px;
-color:#444;
+color:#1b1919;
 margin-bottom:20px;
 white-space:pre-wrap;
 }
@@ -177,8 +174,8 @@ flex:1;
 padding:12px;
 border:none;
 border-radius:10px;
-background:#3b82f6;
-color:white;
+background:#2ca8e6;
+color:rgb(238, 234, 234);
 cursor:pointer;
 font-weight:600;
 transition:.3s;
@@ -193,7 +190,7 @@ flex:1;
 padding:12px;
 border:none;
 border-radius:10px;
-background:#ef4444;
+background:#f03030;
 color:white;
 cursor:pointer;
 font-weight:600;
@@ -201,7 +198,7 @@ transition:.3s;
 }
 
 .del:hover{
-background:#dc2626;
+background:#ea0505;
 }
 
 @media(max-width:700px){
@@ -221,7 +218,7 @@ text-align:center;
 }
 
 .nav h1{
-font-size:28px;
+font-size:30px;
 }
 
 .write h2{
